@@ -1,0 +1,429 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.game-card {
+  border: 1px solid #d40000;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.game-card img {
+  max-width: 200px;
+  max-height: 100px;
+  background-size: cover;
+}
+
+.game-card h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.game-card p {
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Menu Cabezera */
+.main-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.container-header {
+  width: 100%;
+  padding: 0 30px;
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header-wrapper {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  list-style: none;
+  padding-right: 60px;
+  gap: 120px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.language-switch a {
+  text-decoration: none;
+  color: #000;
+}
+.language-switch span {
+  padding-right: 20px;
+}
+
+.gradient-overlay {
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  background: rgb(73, 56, 56);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.19931722689075626) 100%
+  );
+}
+/* Estilo para el logo */
+.logo {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.title-pag-game {
+  padding-top: 20px;
+  text-align: center;
+}
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+}
+
+.hero-content figure {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 5em;
+  margin: 0;
+}
+
+/* parte administracion */
+.admin-section {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.container-admin {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.admin-options {
+  margin-bottom: 20px;
+}
+
+.admin-options button {
+  background-color: #2416e9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.admin-options button:hover {
+  background-color: #5b95d8;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.admin-table th {
+  background-color: #2416e9;
+  color: white;
+}
+/* Estilo para ocultar columnas específicas */
+.admin-table th:nth-child(5),
+.admin-table td:nth-child(5),
+.admin-table th:nth-child(8),
+.admin-table td:nth-child(8) {
+  display: none;
+}
+.container-game {
+  background-color: darkgray;
+}
+.div-content-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ESTILOS TABLA JUEGOS */
+/* Estilo general para la sección de la tabla */
+.tabla-juegos {
+  margin: 2em 0;
+  padding: 2em;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del contenedor de la tabla */
+.container-table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Estilo del título de la sección */
+.tabla-juegos .title-pag-game {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+/* Estilo general de la tabla */
+#tabla-juegos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Estilo de las celdas del encabezado de la tabla */
+#tabla-juegos thead th {
+  background-color: #3d65d3;
+  color: white;
+  padding: 1em;
+  text-align: left;
+}
+
+/* Estilo de las celdas del cuerpo de la tabla */
+#tabla-juegos tbody td {
+  padding: 0.75em;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para filas alternas en el cuerpo de la tabla */
+#tabla-juegos tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Estilo para resaltar las filas al pasar el cursor */
+#tabla-juegos tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Estilo para las celdas del cuerpo de la tabla */
+#tabla-juegos tbody td {
+  color: #333;
+  font-size: 0.95em;
+}
+
+/* FORMULARIO EDITAR JUEGO */
+#form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+#form label {
+  margin-bottom: 10px;
+}
+
+#form input {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+#form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#form button:hover {
+  background-color: #0056b3;
+}
+
+/* FORMULARIO PARA EDITAR JUEGO */
+/* Overlay styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+  display: none; /* Oculto por defecto */
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Form container styles */
+#form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* ESTILOS BOTONES TABLA JUEGOS */
+.btn-editar,
+.btn-borrar {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-editar {
+  background-color: #1ea329;
+  color: #fff;
+}
+
+.btn-borrar {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-editar:hover,
+.btn-borrar:hover {
+  background-color: #0056b3;
+}
+
+/* ESTILOS PARA EL FORMULARIO DE CREAR UN NUEVO JUEGO */
+.crear-juego {
+  margin-top: 50px;
+}
+
+.container-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-pag-game {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #1100ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #2ec8ee;
+}

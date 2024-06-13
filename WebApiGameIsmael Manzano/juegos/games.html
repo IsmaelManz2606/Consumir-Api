@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApiGameConsumer</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="gradient-overlay"></div>
+      <div class="container-header">
+        <a href="../index.html" class="logo">
+          <img src="../images/logo.jpeg" alt="Logo" />
+        </a>
+        <div class="header-wrapper">
+          <nav class="main-nav">
+            <a href="../juegos/games.html">GAMES</a>
+            <a href="../categorias/categorias.html">CATEGORIAS</a>
+            <a href="../user/usuarios.html">USUARIOS</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="listado-game">
+      <div class="container-game">
+        <h1 class="title-pag-game">Listado de Juegos</h1>
+        <div id="content" class="cards container"></div>
+      </div>
+    </section>
+
+    <section class="tabla-juegos">
+      <div class="container-table">
+        <h2 class="title-pag-game">CRUD de Juegos</h2>
+        <table id="tabla-juegos">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Desarrollador</th>
+              <th>Fecha de Lanzamiento</th>
+              <th>Plataforma</th>
+              <th>Puntuación</th>
+              <th>Categoría</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-juegos-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Overlay Container -->
+    <div id="overlay" class="overlay">
+      <div id="form-container"></div>
+    </div>
+
+    <!-- Seccion de crear un juego nuevo -->
+    <section class="crear-juego">
+      <div class="container-form">
+        <h2 class="title-pag-game">Crear Juego Nuevo</h2>
+        <form id="crearJuegoForm">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+          <label for="desarrollador">Desarrollador:</label>
+          <input
+            type="text"
+            id="desarrollador"
+            name="desarrollador"
+            required
+          /><br /><br />
+
+          <label for="fechaLanzamiento">Fecha de Lanzamiento:</label>
+          <input
+            type="date"
+            id="fechaLanzamiento"
+            name="fechaLanzamiento"
+            required
+          /><br /><br />
+
+          <label for="plataforma">Plataforma:</label>
+          <input
+            type="text"
+            id="plataforma"
+            name="plataforma"
+            required
+          /><br /><br />
+
+          <label for="puntuacion">Puntuación:</label>
+          <input
+            type="number"
+            id="puntuacion"
+            name="puntuacion"
+            min="0"
+            max="10"
+            required
+          /><br /><br />
+
+          <button type="submit">Crear Juego Nuevo</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="../js/admin-game.js"></script>
+  </body>
+</html>
