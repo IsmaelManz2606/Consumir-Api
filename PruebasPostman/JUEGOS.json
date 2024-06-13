@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "ff8005d1-a307-43d7-bcab-dc9dd1b6ec0e",
+		"name": "JUEGOS_1.1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32295153"
+	},
+	"item": [
+		{
+			"name": "Juego",
+			"item": [
+				{
+					"name": "Todos los juegos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/juegos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"juegos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Searched Games",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/juegos/search/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"juegos",
+								"search",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Juego Nuevo Pistolas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"desarrollador\": \"Ismaelerpistolas\",\r\n    \"fechaLanzamiento\": \"2003-06-26\",\r\n    \"imagenURL\": \"https://firebasestorage.googleapis.com/v0/b/hibernatejuegos.appspot.com/o/pistolas.jpg?alt=media&token=ffc8dc6a-d60e-4820-acc3-914a7faa4b59\",\r\n    \"nombre\": \"Pistolas\",\r\n    \"plataforma\": \"PC\",\r\n    \"puntuacion\": \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/juegos/crear-nuevo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"juegos",
+								"crear-nuevo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Juego Por Id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoria\": \"RPG\",\r\n    \"desarrollador\": \"Actualizados\",\r\n    \"fechaLanzamiento\": \"2004-11-23\",\r\n    \"imagenURL\": \"https://firebasestorage.googleapis.com/v0/b/hibernatejuegos.appspot.com/o/World%20of%20Warcraft.jpg?alt=media&token=70a54eda-aa06-45ab-a23b-b9ef99433dba\",\r\n    \"nombre\": \"World of Warcraft\",\r\n    \"plataforma\": \"PC\",\r\n    \"puntuacion\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/juegos/actualizar/21",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"juegos",
+								"actualizar",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Juego por id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/juegos/delete/21",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"juegos",
+								"delete",
+								"21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "Todas las categorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/categorias",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear categoria nueva",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Estrategia\",\r\n    \"descripcion\": \"Juegos de estrategia en tiempo real\",\r\n    \"popularidad\": 8\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/categorias/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categorias",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Categoria Por Id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Nueva categoría\",\r\n    \"descripcion\": \"Nueva descripción\",\r\n    \"popularidad\": 10\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/categorias/actualizar/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categorias",
+								"actualizar",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Categoria por id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/categorias/delete/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categorias",
+								"delete",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Todas los usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear usuario nuevo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Nuevo Usuario\",\r\n    \"email\": \"nuevousuario@gmail.com\",\r\n    \"edad\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Usuario Por Id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Jose Nuevo\",\r\n    \"email\": \"josenuevo@gmail.com\",\r\n    \"edad\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios/actualizar/11",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"actualizar",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Usuario por id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuarios/delete/10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"delete",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Relaciones",
+			"item": [
+				{
+					"name": "ManyToOne",
+					"item": [
+						{
+							"name": "Asignar categoria a juego",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/juegos/categoria/4/20",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"juegos",
+										"categoria",
+										"4",
+										"20"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Categoria de un JUEGO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/juegos/categoria/20",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"juegos",
+										"categoria",
+										"20"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Juegos de una categoria ",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/categorias/juegos/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"categorias",
+										"juegos",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ManyToMany",
+					"item": [
+						{
+							"name": "Agregar usuario a juego",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/usuarios/juegos/2/20",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"usuarios",
+										"juegos",
+										"2",
+										"20"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Usuarios de un juego",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/juegos/usuarios/13",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"juegos",
+										"usuarios",
+										"13"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Juegos de un usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/usuarios/juegos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"usuarios",
+										"juegos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
